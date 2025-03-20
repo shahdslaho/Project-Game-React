@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import LogoImage from "../../assets/images/image.png";
 import SearchInput from "./SearchInput";
 import ThemeToggle from "../Theme/ThemeToggle";
-import Sidebar from "./Sidebar"; 
+import Sidebar from "./SideBar" // تأكد من أن المسار صحيح
 import navBarStyles from "../../assets/styles/NaveBar.module.css";
 import useThemeStore from "../../store/themeStore"; // Import the theme store
 
