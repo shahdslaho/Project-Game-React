@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+.gradientText {
+  background: linear-gradient(to right, var(--text-gradient-from), var(--text-gradient-to));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: 'Rajdhani', sans-serif;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  /* ✅ إضافة حدود للنص */
+  -webkit-text-stroke: 0.2px var(--text-gradient-to); /* حدود باللون الأبيض */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* تأثير ظل خفيف */
+}
+
+
+@media (max-width: 1200px) {
+  .gradientText {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gradientText {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gradientText {
+    font-size: 1.8rem;
+  }
+}

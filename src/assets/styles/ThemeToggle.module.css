@@ -1,0 +1,70 @@
+
+.toggleContainer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hiddenCheckbox {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.toggleSwitch {
+  position: relative;
+  width: 86px;
+  height: 32px;
+  background-color: var(--toggle-bg); 
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.toggleThumb {
+  width: 24px;
+  height: 24px;
+  background-color: var(--toggle-thumb); 
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+[data-theme="dark"] .toggleSwitch {
+  background-color: var( --toggle-bg);
+  box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
+
+}
+
+[data-theme="dark"] .toggleThumb {
+  transform: translateX(54px);
+  background-color: var(--toggle-thumb); 
+}
+
+[data-theme="light"] .toggleSwitch {
+  background-color: var( --toggle-bg);
+  box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
+
+}
+
+[data-theme="light"] .toggleThumb {
+  transform: translateX(0);
+  background-color: var(--toggle-thumb); 
+}
+
+.moonIcon {
+  margin-top:3px;
+  margin-left: 3px;
+  color: var(--toggle-bg);
+}
+
+.sunIcon {
+  margin-top:3px;
+  margin-left: 3px;
+  color: var(--toggle-bg);
+}

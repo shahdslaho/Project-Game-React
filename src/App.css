@@ -1,0 +1,42 @@
+
+/* الوضع الفاتح */
+:root {
+    --bg-color: #e0f7ff; 
+    --navbar-bg: #0088cc;
+    --sidebar-bg: #e0f7ff; 
+    --card-bg: #f0fcff; 
+    --button-bg: #0088cc; 
+    --button-hover-bg: #33ccff; 
+    --text-color: #00334d; 
+    --icon-color:#002a55; 
+    --toggle-bg: #d9faff; 
+    --toggle-thumb: #002a55; 
+    --glow-color:  #00334d;
+    --text-gradient-from: #067dbe; 
+    --text-gradient-to: #00c3ff;
+    
+  
+  }
+  
+  /*  الوضع الداكن */
+  [data-theme="dark"] {
+    --bg-color: #001122;
+    --navbar-bg: #002244;
+    --sidebar-bg: #001122;
+    --card-bg: #003366;
+    --button-bg: #002a55;
+    --button-hover-bg: #0088ff;
+    --text-color: #e8fbff;
+    --icon-color: #ffffff;
+    --toggle-bg: #002a55;
+    --toggle-thumb:  #d9faff;
+    --glow-color: rgba(0, 136, 255, 0.9);
+    --text-gradient-from: #0292f9; 
+    --text-gradient-to: #89c4ee; 
+  }
+  
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s;
+  }

@@ -1,0 +1,107 @@
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--button-bg); 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
+  color: var(--text-color, #ffffff);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: var(--button-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0px 0px 5px var(--glow-color), 0px 0px 10px var(--glow-color);
+}
+
+html[data-theme="dark"] .button {
+  background: var(--button-bg);
+}
+
+html[data-theme="dark"] .button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+  border: 2px solid var(--highlight-color, var(--glow-color));
+}
+
+.img:hover {
+  transform: scale(1.05);
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+  margin-left: 10px;
+}
+
+html[data-theme="light"] .text {
+  color: var(--text-color);
+}
+
+html[data-theme="dark"] .text {
+  color: var(--text-color);
+}
+
+.list {
+  width: 250px;
+  position: fixed;
+  left: -250px;
+  top: 0;
+  padding: 15px;
+  height: 100vh;
+  transition: left 0.3s ease-in-out;
+  overflow-y: auto;
+  z-index: 1100;
+ 
+  padding-top: 10%;
+ 
+  
+}
+
+.list::-webkit-scrollbar {
+  width: 4px; /* عرض الشريط */
+}
+
+/* تخصيص شكل المقبض (Thumb) داخل الشريط */
+.list::-webkit-scrollbar-thumb {
+  background: var(--card-bg); /* لون يتماشى مع الثيم */
+  border-radius: 6px; /* حواف ناعمة */
+ 
+}
+
+
+.list.open {
+  left: 0;
+}
+
+html[data-theme="dark"] .listButten {
+  background-color: var(--sidbar-color);
+}
+.listButten{
+
+  width: 200px;
+  height: auto;
+  background-color: var(--sidbar-color);
+  border-radius: 8px;
+  box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
+}
+
+

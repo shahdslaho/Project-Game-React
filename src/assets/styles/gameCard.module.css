@@ -1,0 +1,124 @@
+
+/* Grid Container للكروت */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* تجاوب للشاشات المختلفة */
+@media (max-width: 1200px) {
+  .gridContainer {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card {
+    max-width: 300px;
+  }
+  
+  .image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card {
+    max-width: 280px;
+  }
+  
+  .image {
+    height: 180px;
+  }
+  
+  .title {
+    font-size: 1.1rem;
+    padding: 8px;
+  }
+  
+  .details {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+  
+  .card {
+    max-width: 100%;
+  }
+  
+  .image {
+    height: 200px;
+  }
+}
+.card {
+  max-width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--card-bg);
+  border: 1px solid var(--glow-colo);
+  box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
+ 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 5px var(--glow-color), 0px 0px 10px var(--glow-color);
+}
+
+.image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.details {
+  padding: 16px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.score {
+  font-weight: bold;
+  color: var(--highlight-color);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  padding: 10px;
+}
+
+.title:hover {
+  color: var(--highlight-color);
+}
+
+html[data-theme="dark"] {
+  box-shadow: 0px 0px 5px var(--glow-color), 0px 0px 10px var(--glow-color);
+}

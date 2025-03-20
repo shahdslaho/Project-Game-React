@@ -1,0 +1,73 @@
+.gameList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  background: var(--bg-color);
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .gameList {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gameList {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 12px;
+  }
+  
+  .errorMessage {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameList {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  .errorMessage {
+    font-size: 12px;
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .skeletonContainer {
+    gap: 10px;
+  }
+}
+
+.errorMessage {
+  padding: 12px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--error-text, #d32f2f);
+  background: var(--error-bg, #ffebee);
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--error-border, #d32f2f);
+}
+
+[data-theme="dark"] {
+  --error-text: #ff8a80;
+  --error-bg: #3a1c1c;
+  --error-border: #ff5252;
+}
+
+.skeletonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
