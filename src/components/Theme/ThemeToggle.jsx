@@ -3,7 +3,7 @@ import { FaSun, FaMoon } from "react-icons/fa";
 import styles from "../../../src/assets/styles/ThemeToggle.module.css";
 
 const ThemeToggle = () => {
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
