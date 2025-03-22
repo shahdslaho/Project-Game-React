@@ -2,7 +2,7 @@
 import useGenres from "../../hooks/useGenres";
 import LoadingSpinner from "../LoadingSpinner";
 import GenreButton from "./GenreButton";
-
+/// Game genre button list component 
 const GenreList = ({ onSelectGenre }) => {
   const { data, isLoading } = useGenres();
 

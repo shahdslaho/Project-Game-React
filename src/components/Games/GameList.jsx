@@ -1,11 +1,12 @@
-import { useInView } from "react-intersection-observer"; // لمراقبة ظهور العناصر
+/* eslint-disable react/prop-types */
+import { useInView } from "react-intersection-observer"; 
 import React, { useEffect } from "react"; 
 import useGames from "../../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import styles from "../../../src/assets/styles/gameList.module.css";
 import useSearchStore from "../../store/searchStore"; 
-
+// Game list component 
 const GameList = ({
   selectGenre,
   selectPlatform,
@@ -41,11 +42,11 @@ const GameList = ({
 
   return (
     <div className={styles.gameList}>
-      {/* Loading Skeletons */}
+     
       {isLoading &&
         skeletons.map((skeleton) => <GameCardSkeleton key={skeleton} />)}
 
-      {/* Render Games */}
+     
       {data?.pages.map((page, index) => (
         <React.Fragment key={index}>
           {page.results.map((game) => (
@@ -54,7 +55,6 @@ const GameList = ({
         </React.Fragment>
       ))}
 
-      {/* Load More Button or Infinite Scroll Trigger */}
       <div ref={ref}>
         {isFetchingNextPage && <div>Loading more games...</div>}
       </div>

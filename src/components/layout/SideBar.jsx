@@ -2,12 +2,16 @@
 import GenreList from "../Genres/GenreList";
 import sidbar from "../../assets/styles/SideBar.module.css";
 import navBarStyles from "../../assets/styles/NaveBar.module.css"
-const SideBar = ({ onSelectGenre, isSidebarOpen, toggleSidebar }) => {
+import { useGameContext } from '../../context/GameContext';
+
+const SideBar = () => {
+  const { isSidebarOpen, setGenre, toggleSidebar } = useGameContext();
+
   return (
       <div className={`${sidbar.list} ${navBarStyles.sidebar} ${isSidebarOpen ? navBarStyles.open : ""}`}>
        <button 
                className={`${navBarStyles.menuButton} ${isSidebarOpen ? navBarStyles.active : ""}`} 
-               onClick={toggleSidebar}
+               onClick={toggleSidebar} // Toggle sidebar visibility
              >
              
                {isSidebarOpen ? (
@@ -28,8 +32,8 @@ const SideBar = ({ onSelectGenre, isSidebarOpen, toggleSidebar }) => {
 <div className={sidbar.listButten}>
  
  <GenreList onSelectGenre={(genre) => {
-        onSelectGenre(genre);
-        toggleSidebar(); 
+         setGenre(genre); // Set selected genre
+        toggleSidebar();  // Close sidebar after selection
       }} />
 </div>
      

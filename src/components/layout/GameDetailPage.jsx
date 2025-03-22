@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import apiClient from '../services/api-client';
+import apiClient from '../../services/api-client';
 import { FaArrowLeft, FaChevronDown, FaChevronUp } from 'react-icons/fa';
-import styles from '../assets/styles/GameDetail.module.css';
+import styles from '../../assets/styles/GameDetail.module.css';
 
+// Game detail page component
 const GameDetailPage = () => {
   const { id } = useParams();
   const [isExpanded, setIsExpanded] = useState(false);

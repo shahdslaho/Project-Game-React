@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const CriticScore = ({ score }) => {
     let color = score > 75 ? "orange" : score > 60 ? "yellow" : "";
     return (
@@ -5,6 +7,10 @@ const CriticScore = ({ score }) => {
             {score}
         </span>
     );
+};
+
+CriticScore.propTypes = {
+    score: PropTypes.number.isRequired
 };
 
 export default CriticScore;

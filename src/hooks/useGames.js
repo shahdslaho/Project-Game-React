@@ -1,6 +1,6 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import apiClient from "../services/api-client";
-
+// Custom hook to fetch games using infinite query
 const useGames = (selectGenre, selectPlatform, selectSortOrder, searchText) => {
   return useInfiniteQuery({
     queryKey: ["games", selectGenre?.id, selectPlatform?.id, selectSortOrder, searchText], 

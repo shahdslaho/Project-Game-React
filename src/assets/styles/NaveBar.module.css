@@ -1,5 +1,4 @@
 .navbar {
-
   width: 100%;
   padding: 0.75rem 1.5rem;
   display: flex;
@@ -10,6 +9,7 @@
   color: var(--text-color);
 }
 
+/* Styling for the logo section */
 .logoSection {
   display: flex;
   align-items: center;
@@ -33,6 +33,7 @@
   }
 }
 
+/* Styling for the search section */
 .searchSection {
   display: flex;
   justify-content: center;
@@ -48,6 +49,7 @@
   }
 }
 
+/* Styling for the theme toggle */
 .themeToggle {
   display: flex;
   align-items: center;
@@ -60,6 +62,7 @@
   }
 }
 
+/* Styling for the menu button */
 .menuButton {
   font-size: 24px;
   color: var(--icon-color); 
@@ -68,17 +71,16 @@
   transition: transform 0.3s ease-in-out;
   z-index: 1500;
 }
+
 html[data-theme="dark"].menuButton {
   color: white; 
 }
 
-
 .menuButton.active {
   transform: rotate(180deg); 
- 
 }
 
-
+/* Styling for the sidebar */
 .sidebar {
   width: 260px;
   position: fixed;
@@ -90,7 +92,6 @@ html[data-theme="dark"].menuButton {
   padding: 20px;
   z-index: 1500;
 }
-
 
 .sidebar.open {
   left: 0; 

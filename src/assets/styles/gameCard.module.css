@@ -1,5 +1,5 @@
 
-/* Grid Container للكروت */
+/* Grid Container for cards */
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -13,7 +13,7 @@
   margin: 0 auto;
 }
 
-/* تجاوب للشاشات المختلفة */
+/* Responsive design for different screen sizes */
 @media (max-width: 1200px) {
   .gridContainer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -67,6 +67,8 @@
     height: 200px;
   }
 }
+
+/* Card styling */
 .card {
   max-width: 350px;
   border-radius: 12px;
@@ -74,15 +76,16 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: var(--card-bg);
   border: 1px solid var(--glow-colo);
-  box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
+  box-shadow: 0px 0px 7px var(--glow-color), 0px 0px 15px var(--glow-color);
  
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 0px 5px var(--glow-color), 0px 0px 10px var(--glow-color);
+  box-shadow: 0px 0px 10px var(--glow-color), 0px 0px 15px var(--glow-color);
 }
 
+/* Image styling */
 .image {
   width: 100%;
   height: 240px;
@@ -91,10 +94,12 @@
   border-top-right-radius: 12px;
 }
 
+/* Details section styling */
 .details {
   padding: 16px;
 }
 
+/* Top section styling */
 .top {
   display: flex;
   justify-content: space-between;
@@ -102,11 +107,13 @@
   margin-bottom: 12px;
 }
 
+/* Score styling */
 .score {
   font-weight: bold;
   color: var(--highlight-color);
 }
 
+/* Title styling */
 .title {
   font-size: 1.25rem;
   font-weight: 600;
@@ -120,5 +127,5 @@
 }
 
 html[data-theme="dark"] {
-  box-shadow: 0px 0px 5px var(--glow-color), 0px 0px 10px var(--glow-color);
+  box-shadow: 0px 0px 10px var(--glow-color), 0px 0px 15px var(--glow-color);
 }

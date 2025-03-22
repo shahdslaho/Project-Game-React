@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import sidBar from "../../assets/styles/SideBar.module.css";
+// Game genre button component 
 const GenreButton = ({ genre, onSelectGenre }) => {
   return (
     <button

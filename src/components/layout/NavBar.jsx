@@ -3,26 +3,27 @@ import Logo from "./Logo";
 import LogoImage from "../../assets/images/image.png";
 import SearchInput from "./SearchInput";
 import ThemeToggle from "../Theme/ThemeToggle";
-import Sidebar from "./SideBar" // تأكد من أن المسار صحيح
+import Sidebar from "./Sidebar"; 
 import navBarStyles from "../../assets/styles/NaveBar.module.css";
-import useThemeStore from "../../store/themeStore"; // Import the theme store
+import { useGameContext } from '../../context/GameContext';
+import useThemeStore from '../../store/themeStore'; // Import themeStore
 
-import PropTypes from 'prop-types';
+// NavBar component
+const NavBar = () => {
+  const { 
+    isSidebarOpen, 
+    toggleSidebar, 
+    setSearchText 
+  } = useGameContext();
 
-const NavBar = ({ onSearch, toggleSidebar, isSidebarOpen }) => {
-
-NavBar.propTypes = {
-  onSearch: PropTypes.func.isRequired,
-  toggleSidebar: PropTypes.func.isRequired,
-  isSidebarOpen: PropTypes.bool.isRequired
-};
-  const { theme, toggleTheme } = useThemeStore(); // Use the theme store
+  const { theme, toggleTheme } = useThemeStore(); // Use themeStore
 
   return (
     <>
       <div className={navBarStyles.navbar}>
         <div className="flex">
-          <button 
+          
+          <button // Sidebar toggle button
             className={`${navBarStyles.menuButton} ${isSidebarOpen ? navBarStyles.active : ""}`}
             onClick={toggleSidebar}
           >
@@ -41,15 +42,13 @@ NavBar.propTypes = {
               </svg>
             )}
           </button>
-
           <div className={`${navBarStyles.logoSection} transition-transform duration-300`}>
             <Logo image={LogoImage} text="Game App Header" className="logo-header" />
           </div>
         </div>
-        
 
         <div className={navBarStyles.searchSection}>
-          <SearchInput onSearch={onSearch} />
+          <SearchInput onSearch={setSearchText} />
         </div>
 
         <div className={navBarStyles.themeToggle}>
@@ -57,7 +56,7 @@ NavBar.propTypes = {
         </div>
       </div>
 
-      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <Sidebar />
     </>
   );
 };

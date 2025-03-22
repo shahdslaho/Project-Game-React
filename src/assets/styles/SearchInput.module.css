@@ -4,10 +4,12 @@
     width: 100%;
 }
 
+/* Container for search input and icon */
 .searchContainer {
     position: relative;
 }
 
+/* Styling for the search icon */
 .searchIcon {
     position: absolute;
     display: flex;
@@ -18,28 +20,30 @@
     margin-top: 10px;
 }
 
+/* Styling for the search input field */
 .searchInput {
     width: 100%;
     padding: 0.75rem 0.75rem 0.75rem 2.5rem;
     font-size: 0.875rem;
     color: var(--text-color);
     border: 2px solid var(--glow-color);
-    box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
-
+    box-shadow: 0px 0px 7px var(--glow-color), 0px 0px 15px var(--glow-color);
     border-radius: 10px;
     background: var(--card-bg);
     transition: 0.2s ease-in-out;
 }
+
 html[data-theme="dark"] .searchInput {
     border: 1px solid var(--glow-color);
     border-radius: 10px;
-  }
-  html[data-theme="dark"] .searchInput:hover {
+}
+
+html[data-theme="dark"] .searchInput:hover {
     outline: none;
     box-shadow: 0px 0px 15px var(--glow-color), 0px 0px 20px var(--glow-color);
-
 }
+
 .searchInput:hover {
     outline: none;
-    box-shadow: 0px 0px 15px var(--glow-color), 0px 0px 20px var(--glow-color);
+    box-shadow: 0px 0px 10px var(--glow-color), 0px 0px 15px var(--glow-color);
 }

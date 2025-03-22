@@ -13,6 +13,7 @@
   opacity: 0;
 }
 
+/* Styling for the toggle switch */
 .toggleSwitch {
   position: relative;
   width: 86px;
@@ -36,9 +37,8 @@
 }
 
 [data-theme="dark"] .toggleSwitch {
-  background-color: var( --toggle-bg);
-  box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
-
+  background-color: var(--toggle-bg);
+  box-shadow: 0px 0px 5px var(--glow-color), 0px 0px 15px var(--glow-color);
 }
 
 [data-theme="dark"] .toggleThumb {
@@ -47,9 +47,8 @@
 }
 
 [data-theme="light"] .toggleSwitch {
-  background-color: var( --toggle-bg);
-  box-shadow: 0px 0px 1px var(--glow-color), 0px 0px 5px var(--glow-color);
-
+  background-color: var(--toggle-bg);
+  box-shadow: 0px 0px 5px var(--glow-color), 0px 0px 15px var(--glow-color);
 }
 
 [data-theme="light"] .toggleThumb {
@@ -57,14 +56,15 @@
   background-color: var(--toggle-thumb); 
 }
 
+/* Styling for icons */
 .moonIcon {
-  margin-top:3px;
+  margin-top: 3px;
   margin-left: 3px;
   color: var(--toggle-bg);
 }
 
 .sunIcon {
-  margin-top:3px;
+  margin-top: 3px;
   margin-left: 3px;
   color: var(--toggle-bg);
 }

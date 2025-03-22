@@ -2,21 +2,24 @@
 import { useState } from "react";
 import usePlatform from "../../hooks/usePlatform";
 import styles from "../../../src/assets/styles/PlatformSelector.module.css";
+import { useGameContext } from "../../context/GameContext"; 
 
-const PlatformSelector = ({ onSelectPlatform, selectPlatform }) => {
+// Platform selector component
+const PlatformSelector = () => {
+  const { selectPlatform, setPlatform } = useGameContext(); 
   const { data, error } = usePlatform();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // State to manage dropdown visibility
 
-  if (error) return null;
+  if (error) return null;  // Return null if there is an error
 
   return (
     <div className={styles.container}>
       <button
         className={styles.button}
         type="button"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen(!isOpen)} 
       >
-        {selectPlatform?.name || "Platforms"}
+        {selectPlatform?.name || "Platforms"} 
         <svg
           className={styles.icon}
           aria-hidden="true"
@@ -42,11 +45,11 @@ const PlatformSelector = ({ onSelectPlatform, selectPlatform }) => {
                 className={styles.item}
                 key={platform.id}
                 onClick={() => {
-                  onSelectPlatform(platform);
-                  setIsOpen(false); // إغلاق القائمة عند اختيار منصة
+                  setPlatform(platform);  // Use game context to update platform
+                  setIsOpen(false); 
                 }}
               >
-                {platform.slug}
+                {platform.slug} 
               </li>
             ))}
           </ul>

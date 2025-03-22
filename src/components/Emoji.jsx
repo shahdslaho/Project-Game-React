@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import bullsEye from "../assets/images/bulls-eye.webp";
 import meh from "../assets/images/meh.webp";
 import thumbsUp from "../assets/images/thumbs-up.webp";

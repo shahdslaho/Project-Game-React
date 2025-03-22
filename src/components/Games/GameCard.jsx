@@ -3,9 +3,10 @@ import getCroppedImageUrl from "../../services/image-url";
 import CriticScore from "../CriticScore";
 import { Emoji } from "../Emoji";
 import PlatformIconList from "../Platform/PlatformIconList";
-import styles from "../../../src/assets/styles/gameCard.module.css"; 
+import styles from "../../../src/assets/styles/gameCard.module.css";  
 import { Link } from 'react-router-dom';
 
+// Game card component
 const GameCard = ({ game }) => {
   return (
     <Link to={`/game/${game.id}`} className="">
